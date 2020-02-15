@@ -6,6 +6,7 @@
 
 
 .header{
+    max-width: 1020px;
     height: 89px;
     background-color: #2d303a;
     display: flex;
