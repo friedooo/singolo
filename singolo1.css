@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Lato-Black";
+    src: url("./assets/fonts/Lato-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+  }
 
 body {
     width: 1020px;
@@ -111,22 +124,23 @@ text-align: left;
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    font-family: "Lato-Black", sans-serif;
+    letter-spacing: -0.2px;
 }
 
 .our-services__description{
     position: absolute;
-    top: 94px;
+    top: 97px;
     left: 40px;
-    width: 940px;
+    width: 950px;
     height: 57px;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 30px;
     color: #767e9e;
-    font-family: 'Lato Light', sans-serif;
-    font-weight: 300;
-    font-style: normal;
+    font-family: "Lato Thin", sans-serif;
+    letter-spacing: 0.36px;
+    
+    
 }
 
 
