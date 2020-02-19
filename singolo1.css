@@ -62,7 +62,7 @@ sup
 .navbar li{
     font-size: 12px;
 line-height: 6px;
-color: white;
+color:white;
 font-family: 'Lato', sans-serif;
 font-weight: 700;
 text-align: left;
@@ -81,7 +81,7 @@ text-align: left;
 
 .slider{
     height: 594px;
-    /*background-color: #f06c64;*/
+    background-color: #f06c64;
     position: relative;
     border-bottom: 6px solid #ea676b;
 }
@@ -139,8 +139,57 @@ text-align: left;
     color: #767e9e;
     font-family: "Lato Thin", sans-serif;
     letter-spacing: 0.36px;
+}
+
+.tools {
+    position: absolute;
+    top: 222px;
+    left:41px;
+    right:41px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.tool{
+    width: 300px;
+    height: 86px;
+    position: relative;
+    margin-bottom: 37px;
+}
+
+.ico{
+    float: left;
+    position: absolute;
+    display: block;
+}
+
+.tool__title{
     
-    
+    position: absolute;
+    top: -20px;
+    left: 82px;
+    font-size: 18px;
+line-height: 18px;
+color: #666d89;
+font-family: "Lato";
+font-weight: 900;
+text-align: left;
+}
+
+.tool__description{
+    position: absolute;
+    top: 15px;
+    left: 82px;
+    width: 219px;
+height: 128px;
+font-size: 12px;
+line-height: 22px;
+color: #767e9e;
+font-family: "Lato";
+font-weight: 400;
+text-align: left;
 }
 
 
