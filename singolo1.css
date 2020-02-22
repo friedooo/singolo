@@ -1,3 +1,8 @@
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
 @font-face {
     font-family: "Lato";
     src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
@@ -24,11 +29,11 @@ body {
 .header{
     max-width: 1020px;
     height: 89px;
-    background-color: #2d303a;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 6px solid  #323746;;
+    border-bottom: 6px solid  #323746;
+    background-color: #2d303a;
 }
 
 .logo{
@@ -38,10 +43,10 @@ body {
     margin-bottom: 36px;
     font-size: 24px;
     font-weight: 700;
-line-height: 6.1px;
-color: #ffffff;
-font-family: 'Lato', sans-serif;
-font-style: normal;
+    line-height: 6.1px;
+    color: #ffffff;
+    font-family: 'Lato Black', 'Arial', sans-serif;
+    font-style: normal;
 }
 
 sup
@@ -53,7 +58,7 @@ sup
 .navbar{
     display:flex;
     justify-content: space-between;
-    width: 371px; 
+    width: 372px; 
     margin-right: 40px;
     margin-top: 45px;
     margin-bottom: 36px;
@@ -61,18 +66,18 @@ sup
 
 .navbar li{
     font-size: 12px;
-line-height: 6px;
-color:white;
-font-family: 'Lato', sans-serif;
-font-weight: 700;
-text-align: left;
-list-style-type: none;
+    line-height: 6px;
+    color:white;
+    font-family: 'Lato Light', 'Arial', sans-serif;
+    font-weight: 700;
+    text-align: left;
+    list-style-type: none;
 }
 
 .navbar li:not(:first-child)::before {
+    margin-right: 13px;
     content: "·";
     color: #494e62;
-    margin-right: 13px;
 }
 
 
@@ -92,9 +97,9 @@ list-style-type: none;
 }
 
 .slider{
+    position: relative;
     height: 594px;
     background-color: #f06c64;
-    position: relative;
     border-bottom: 6px solid #ea676b;
 }
 
@@ -151,7 +156,7 @@ list-style-type: none;
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
-    font-family: "Lato-Black", sans-serif;
+    font-family: "Lato-Black", 'Arial', sans-serif;
     letter-spacing: -0.2px;
 }
 
@@ -161,11 +166,12 @@ list-style-type: none;
     left: 40px;
     width: 950px;
     height: 57px;
-    font-size: 17px;
+    font-size: 17.1px;
     line-height: 30px;
     color: #767e9e;
-    font-family: "Lato Thin", sans-serif;
-    letter-spacing: 0.36px;
+    font-family: "Lato Light", 'Arial', sans-serif;
+    letter-spacing: 0.36px;  
+    font-weight: 600;
 }
 
 .tools {
@@ -180,15 +186,15 @@ list-style-type: none;
 }
 
 .tool{
+    position: relative;
     width: 300px;
     height: 86px;
-    position: relative;
     margin-bottom: 37px;
 }
 
 .ico{
-    float: left;
     position: absolute;
+    float: left;
     display: block;
 }
 
@@ -198,11 +204,10 @@ list-style-type: none;
     top: -20px;
     left: 79px;
     font-size: 18px;
-line-height: 18px;
-color: #666d89;
-font-family: "Lato";
-font-weight: 900;
-text-align: left;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato Black", 'Arial', sans-serif;
+    font-weight: 900;
 }
 
 .tool__description{
@@ -210,13 +215,12 @@ text-align: left;
     top: 15px;
     left: 80px;
     width: 219px;
-height: 128px;
-font-size: 12px;
-line-height: 22px;
-color: #767e9e;
-font-family: "Lato";
-font-weight: 400;
-text-align: left;
+    height: 128px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato Light", 'Arial', sans-serif;
+    font-weight: 700;
 }
 
 
