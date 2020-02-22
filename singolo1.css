@@ -11,11 +11,19 @@ html{
   }
   
   @font-face {
-    font-family: "Lato-Black";
+    font-family: "Lato Black";
     src: url("./assets/fonts/Lato-Black.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: "Lato Light";
+    src: url("./assets/fonts/Lato Light.ttf.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
 
 body {
     width: 1020px;
@@ -187,7 +195,7 @@ sup
 
 .tool{
     position: relative;
-    width: 300px;
+    width: 298px;
     height: 86px;
     margin-bottom: 37px;
 }
@@ -206,8 +214,8 @@ sup
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
-    font-family: "Lato Black", 'Arial', sans-serif;
-    font-weight: 900;
+    font-family: "Lato", 'Arial', sans-serif;
+    letter-spacing: 0.5px;
 }
 
 .tool__description{
