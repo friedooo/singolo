@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Lato Black";
+    src: url("./assets/fonts/Lato-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Lato Light";
+    src: url("./assets/fonts/Lato Light.ttf.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    height: 1604px;
+    max-width: 1020px;
+}
+
+.portfolio {
+    position: relative;
+    height: 863px;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+    overflow: hidden;
+    
+}
+
+
+.portfolio__title {
+    position: absolute;
+    left: 40px;
+    top: 45px;
+    font-size: 30px;
+    line-height: 18px;
+    letter-spacing: -0.3;
+    color: #666d89;
+    font-family: "Lato Black", "Arial", sans-serif;
+    font-weight: 900;
+}
+
+.portfolio__description {
+    position: absolute;
+    left: 40px;
+    top: 115px;
+    width: 942px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.21;
+    color: #767e9e;
+    font-family: "Lato Light", "Arial", sans-serif;
+    font-weight: 300;
+}
+
+.sortbar {
+    position: absolute;
+    left: 41px;
+    top: 138px;
+    display: flex;
+    justify-content: space-between;
+    width: 287px;
+    padding-left: 0;
+    
+}
+
+.sortbar li {
+    list-style-type: none;
+}
+
+.sortbar button {
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    height: 22px;
+    color: #dedede;
+    background-color: #2d303a;
+    font-family: "Lato", "Arial", sans-serif;
+    vertical-align: middle;
+    font-weight: 400;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sortbar button:hover {
+    background-color: lightcoral;
+}
+
+.sortbar button span {
+    position: relative;
+    bottom: 2px;
+}
+
+.portfolio__images {
+    position: absolute;
+    left: 40px;
+    top: 195px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 940px;
+}
+
+.portfolio__images img {
+    margin-bottom: 20px;
+}
+
+.about-us {
+    position: relative;
+    height: 728px;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+}
+
+.about-us__title {
+    position: absolute;
+    top: 45px;
+    left: 40px;
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato Black", "Arial", sans-serif;
+    font-weight: 900;   
+}
+
+.about-us__description {
+    position: absolute;
+    top: 115px;
+    left: 41px;
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.15;
+    color: #767e9e;
+    font-family: "Lato Light", "Arial", sans-serif;
+    font-weight: 300;
+}
+
+.about-us__persons {
+    position: absolute;
+    top: 219px;
+    left: 39px;
+    width: 940px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.name {
+    position: absolute;
+    top: 319px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato Black", "Aria", sans-serif;
+    font-weight: 900;
+}
+
+.description {
+    position: absolute;
+    top: 346px;
+    width: 300px;
+    height: 175px;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.08;
+    color: #767e9e;
+    font-family: "Lato Light", "Arial", sans-serif;
+    font-weight: 400;
+}
+
+.links {
+    position: relative;
+    top: 111px;
+    left: 2px;
+    width: 153px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.fb {
+    width: 33px;
+    height: 34px;
+    background: url('./assets/img2/fb.png') no-repeat;
+}
+
+.google {
+    width: 33px;
+    height: 34px;
+    background: url('./assets/img2/google+.png') no-repeat;
+}
+
+.twitter {
+    width: 33px;
+    height: 34px;
+    background: url('./assets/img2/twitter.png') no-repeat;
+}
+
+.ln {
+    width: 33px;
+    height: 34px;
+    background: url('./assets/img2/linkedin.png') no-repeat;
+}
+
+.links div {
+    border-radius: 50%;
+    background-color: #f2f2f2;
+}
+
+.links div:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 5px rgb(67, 124, 199);
+    background-color: rgb(59, 59, 202);
+}
