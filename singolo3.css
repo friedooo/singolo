@@ -35,27 +35,29 @@ padding: 0;
 
 .get-quote__title {
   position: absolute;
-  top: 67px;
+  top: 69px;
   left: 40px;
   width: 940px;
   font-size: 30px;
   line-height: 18px;
+  letter-spacing: -0.1px;
   color: #f0d8d9;
-  font-family: "Lato";
-  font-weight: 900;
+  color: black;
+  font-family: "Lato Black" , "Arial", sans-serif;
 }
 
 .get-quote__description {
   position: absolute;
-  top: 122px;
+  top: 115px;
   left: 40px;
   width: 940px;
   height: 57px;
   font-size: 18px;
   line-height: 30px;
+  letter-spacing: -0.07px;
   color: #f0d8d9;
-  font-family: "Lato";
-  font-weight: 300;
+  color: black;
+  font-family: "Lato Light", "Arial", sans-serif;
 }
 
 .get-quote__wrapper {
