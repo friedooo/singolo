@@ -14,11 +14,11 @@
             mauris condimentum nibh.
         </p>
         <div class="get-quote__wrapper">
-        <form action="get">
-            <input type="text" name="name" required>
-            <input type="email" name="email" required>
-            <input type="text" name="subject">
-            <textarea name="description" id="" cols="30" rows="10"></textarea>
+        <form action="get" class = "get-quote__form">
+            <input type="text" name="name" placeholder="Name (Required)" required>
+            <input type="email" name="email" placeholder="Email (Required)" required>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="description" id="" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
             <input type="submit" value = "send">
         </form>
         <div class="contact-information">
@@ -40,7 +40,19 @@
         </div>
     </section>
     <footer class = "footer">
-
+    <div class="footer__copyright">
+        &copy; Copyright 2013
+    </div>
+    <div class="footer__links">
+        <div class="footer_link fb">
+        </div>
+        <div class="footer_link google">
+        </div>
+        <div class="footer_link twitter">
+        </div>
+        <div class="footer_link ln">
+        </div>
+    </div>
     </footer>
 </body>
 </html>
