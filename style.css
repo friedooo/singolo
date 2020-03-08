@@ -615,6 +615,21 @@ sup
     margin-left: 23px;
 }
 
+.a-link {
+    position: relative;
+    bottom: 2px;
+    margin-left: 23px;
+    color: #f0d8d9;
+    text-decoration: none;
+}
+
+.a-link__mailto {
+    position: relative;
+    bottom: 2px;
+    color: #f0d8d9;
+    text-decoration: none;
+}
+
 .contact-information__geo__img {
     position: absolute;
     top: 4px;
@@ -664,6 +679,12 @@ sup
   font-size: 12px;
   font-weight: 400;
   font-family: "Lato-Regular", "Arial", sans-serif;
+}
+
+.footer__copyright:hover {
+    cursor: pointer;
+    color: white;
+    transition: color 2s ease-in-out;
 }
 
 .footer__links {
