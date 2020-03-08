@@ -615,6 +615,21 @@ sup
     margin-left: 23px;
 }
 
+.a-link {
+    position: relative;
+    bottom: 2px;
+    margin-left: 23px;
+    color: #f0d8d9;
+    text-decoration: none;
+}
+
+.a-link__mailto {
+    position: relative;
+    bottom: 2px;
+    color: #f0d8d9;
+    text-decoration: none;
+}
+
 .contact-information__geo__img {
     position: absolute;
     top: 4px;
