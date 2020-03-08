@@ -102,7 +102,7 @@
             </div> 
         
             <ul class = "sortbar">
-                <li><button><span>All</span></button></li>
+                <li><button id="sortbar__active"><span>All</span></button></li>
                 <li><button><span>Web Design</span></button></li>
                 <li><button><span>Graphic Design</span></button></li>
                 <li><button><span>Artwork</span></button></li>
@@ -198,7 +198,6 @@
                 </div>
             </div>
         </section>
-    </main>
     <section class = "get-quote">
         <h2 class="get-quote__title">Get a Quote</h2>
         <p class="get-quote__description">Fusce dapibus, tellus ac cursus commodo, 
@@ -207,12 +206,13 @@
             mauris condimentum nibh.
         </p>
         <div class="get-quote__wrapper">
-        <form action="get" class = "get-quote__form">
+        <form class = "get-quote__form" action="https://www.w3schools.com/action_page.php"
+        method="post" name="feedback" target="_blank">
             <input type="text" name="name" placeholder="Name (Required)" required>
             <input type="email" name="email" placeholder="Email (Required)" required>
             <input type="text" name="subject" placeholder="Subject">
-            <textarea name="description" id="" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-            <input type="submit" value = "send">
+            <textarea name="description" name="message" id="" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+            <input type="submit" value = "send" class="send">
         </form>
         <div class="contact-information">
             <h3 class = "contact-information__title">Contact Information</h3>
@@ -233,11 +233,12 @@
                 <div class="email">
                 <span class="contact-information__email__img"></span>
                 <span class="contact-information__email">info@singolo.com</span>
-                span</div>
+                </div>
             </div>
         </div>
         </div>
-    </section>
+        </section>
+    </main>
     <footer class = "footer">
 
     <div class="footer__copyright">
