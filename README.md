@@ -1,1 +1,1 @@
-https://friedooo.github.io/singolo/singolo1.html
+https://friedooo.github.io/singolo/index.html
