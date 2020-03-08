@@ -2,25 +2,25 @@
 
 @font-face {
     font-family: "Lato-Bold";
-    src: url("../assets/fonts/Lato-Bold.ttf") format("opentype");
+    src: url("./assets/fonts/Lato-Bold.ttf") format("opentype");
     font-weight: 700;
   }
   
   @font-face {
     font-family: "Lato-Black";
-    src: url("../assets/fonts/Lato-Black.ttf") format("opentype");
+    src: url("./assets/fonts/Lato-Black.ttf") format("opentype");
     font-weight: 900;
   }
   
   @font-face {
     font-family: "Lato-Light";
-    src: url("../assets/fonts/Lato-Light.ttf") format("opentype");
+    src: url("./assets/fonts/Lato-Light.ttf") format("opentype");
     font-weight: 300;
   }
   
   @font-face {
     font-family: "Lato-Regular";
-    src: url("../assets/fonts/Lato-Regular.ttf") format("opentype");
+    src: url("./assets/fonts/Lato-Regular.ttf") format("opentype");
     font-weight: 400;
   }
 
@@ -28,6 +28,15 @@
     margin: 0;
     padding: 0;
     }
+
+    
+body {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1020px;
+}
 
 /* ============ header ============ */
 
@@ -50,7 +59,7 @@
     font-size: 24px;
     font-weight: 900;
     color: #ffffff;
-    font-family: 'Lato Black', 'Arial', sans-serif;
+    font-family: 'Lato-Black', 'Arial', sans-serif;
 }
 
 sup
@@ -148,6 +157,8 @@ sup
     right: 111px;
 }
 
+/* ========== our services ========= */
+
 .our-services{
     position: relative;
     height: 497px;
@@ -157,19 +168,19 @@ sup
 
 .our-services__name{
     position: absolute;
-    top: 72px;
+    top: 68px;
     left: 40px;
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
     font-weight: 900;;
-    font-family: 'Lato Black', 'Arial', sans-serif;
+    font-family: 'Lato-Black', 'Arial', sans-serif;
     letter-spacing: 0.2px
 }
 
 .our-services__description{
     position: absolute;
-    top: 115px;
+    top: 113px;
     left: 40px;
     width: 950px;
     height: 57px;
@@ -177,7 +188,7 @@ sup
     line-height: 30px;
     color: #767e9e;
     font-weight: 300;
-    font-family: "Lato Light", 'Arial', sans-serif;
+    font-family: "Lato-Light", 'Arial', sans-serif;
     text-align: justify; 
     letter-spacing: -0.012em;
 }
@@ -208,36 +219,31 @@ sup
 
 .tool__title{
     position: absolute;
-    top: -18px;
+    top: -4px;
     left: 79px;
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
-    font-family: "Lato Black", 'Arial', sans-serif;
-    letter-spacing: 0.5px;
+    font-family: "Lato-Black", 'Arial', sans-serif;
+    letter-spacing: 0.2px;
 }
 
 .tool__description{
     position: absolute;
-    top: 13px;
+    top: 24px;
     left: 79px;
     width: 219px;
     height: 128px;
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
-    font-family: "Lato Light", 'Arial', sans-serif;
+    font-family: "Lato-Light", 'Arial', sans-serif;
     font-weight: 700;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    height: 1604px;
-    max-width: 1020px;
-}
+
+/* ============ portfoliO ========== */
+
 
 .portfolio {
     position: relative;
@@ -252,56 +258,55 @@ body {
 .portfolio__title {
     position: absolute;
     left: 40px;
-    top: 45px;
+    top: 66px;
     font-size: 30px;
     line-height: 18px;
     letter-spacing: -0.3;
     color: #666d89;
-    font-family: "Lato Black", "Arial", sans-serif;
+    font-family: "Lato-Black", "Arial", sans-serif;
     font-weight: 900;
 }
 
 .portfolio__description {
     position: absolute;
     left: 40px;
-    top: 115px;
+    top: 111px;
     width: 942px;
     height: 57px;
     font-size: 18px;
     line-height: 30px;
-    letter-spacing: -0.21;
+    letter-spacing: -0.01;
     color: #767e9e;
-    font-family: "Lato Light", "Arial", sans-serif;
+    font-family: "Lato-Light", "Arial", sans-serif;
     font-weight: 300;
 }
 
 .sortbar {
     position: absolute;
     left: 41px;
-    top: 138px;
+    top: 152px;
     display: flex;
     justify-content: space-between;
-    width: 287px;
-    padding-left: 0;
-    
+    width: 285px;    
 }
 
 .sortbar li {
     list-style-type: none;
+    height: 22px;
 }
 
 .sortbar button {
+    padding: 6px;
     border: 1px solid #666d89;
     border-radius: 5px;
     font-size: 12px;
     line-height: 20px;
     height: 22px;
-    color: #dedede;
+    color: #767e9e;
     background-color: #2d303a;
-    font-family: "Lato", "Arial", sans-serif;
-    vertical-align: middle;
     font-weight: 400;
-    text-align: left;
+    font-family: "Lato-Regular", "Arial", sans-serif;
+    vertical-align: middle;
     cursor: pointer;
 }
 
@@ -309,9 +314,15 @@ body {
     background-color: lightcoral;
 }
 
+#sortbar__active {
+    color: dedede;
+    border: 1px solid #dedede;
+}
+
 .sortbar button span {
     position: relative;
-    bottom: 2px;
+    bottom: 6px;
+    
 }
 
 .portfolio__images {
@@ -335,39 +346,40 @@ body {
 
 .about-us {
     position: relative;
-    height: 728px;
+    height: 725px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
 }
 
+/* ======== about us ======= */ 
+
 .about-us__title {
     position: absolute;
-    top: 45px;
+    top: 66px;
     left: 40px;
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
-    font-family: "Lato Black", "Arial", sans-serif;
+    font-family: "Lato-Black", "Arial", sans-serif;
     font-weight: 900;   
 }
 
 .about-us__description {
     position: absolute;
-    top: 115px;
+    top: 112px;
     left: 41px;
     width: 940px;
     height: 57px;
     font-size: 18px;
     line-height: 30px;
-    letter-spacing: -0.15;
     color: #767e9e;
-    font-family: "Lato Light", "Arial", sans-serif;
-    font-weight: 300;
+    font-family: "Lato-Regular", "Arial", sans-serif;
+    letter-spacing: -0.0035em;
 }
 
 .about-us__persons {
     position: absolute;
-    top: 219px;
+    top: 216px;
     left: 39px;
     width: 940px;
     display: flex;
@@ -377,25 +389,28 @@ body {
 
 .name {
     position: absolute;
-    top: 319px;
+    top: 317px;
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
-    font-family: "Lato Black", "Aria", sans-serif;
+    font-family: "Lato-Black", "Aria", sans-serif;
     font-weight: 900;
+    
 }
 
 .description {
     position: absolute;
-    top: 346px;
+    top: 345px;
     width: 300px;
     height: 175px;
     font-size: 12px;
     line-height: 22px;
-    letter-spacing: -0.08;
     color: #767e9e;
-    font-family: "Lato Light", "Arial", sans-serif;
     font-weight: 400;
+    font-family: "Lato-Regular", "Arial", sans-serif;
+    text-align: justify;
+    line-height: 21px;
+    letter-spacing: -0.005em;
 }
 
 .links {
@@ -444,6 +459,9 @@ body {
     background-color: rgb(59, 59, 202);
 }
 
+
+/* ======= get a quote ========= */
+
 .get-quote {
     position: relative;
     width: 1020px;
@@ -462,13 +480,12 @@ body {
   line-height: 18px;
   letter-spacing: -0.1px;
   color: #f0d8d9;
-  color: black;
-  font-family: "Lato Black" , "Arial", sans-serif;
+  font-family: "Lato-Black" , "Arial", sans-serif;
 }
 
 .get-quote__description {
   position: absolute;
-  top: 115px;
+  top: 114px;
   left: 40px;
   width: 940px;
   height: 57px;
@@ -476,8 +493,8 @@ body {
   line-height: 30px;
   letter-spacing: -0.07px;
   color: #f0d8d9;
-  color: black;
-  font-family: "Lato Light", "Arial", sans-serif;
+  font-weight: 300;
+  font-family: "Lato-Light", "Arial", sans-serif;
 }
 
 .get-quote__wrapper {
@@ -520,7 +537,7 @@ body {
 
 .get-quote__form textarea {
   height: 203px;
-  margin: 0 0 14px 0;
+  margin: 3px 0 14px 0;
   padding-left: 15px;
   border: 0px solid black;
   border-radius: 5px;
@@ -528,16 +545,23 @@ body {
   font-size: 12px;
   line-height: 22px;
   color: #f0d8d9;
-  font-family: "Lato";
   font-weight: 400;
+  font-family: "Lato-Regular", "Arial", sans-serif;
 }
 
 .get-quote__form textarea::placeholder {
+    padding-top: 10px;
   font-size: 12px;
   line-height: 22px;
   color: #f48c8f;
   font-family: "Lato";
   font-weight: 400;
+}
+
+.send:hover {
+    cursor: pointer;
+    color: dodgerblue;
+    transition: color 1s ease-in-out;
 }
 
 .contact-information {
@@ -550,42 +574,61 @@ body {
   font-size: 18px;
   line-height: 18px;
   color: #f0d8d9;
-  font-family: "Lato";
-  font-weight: 900;
+  font-family: "Lato-Black", "Arial", sans-serif;
+  letter-spacing: -0.0035em;
 }
 
 .contact-information__description {
   position: absolute;
-  top: 32px;
+  top: 29px;
   width: 300px;
   height: 175px;
   font-size: 12px;
   line-height: 22px;
   color: #f0d8d9;
-  font-family: "Lato";
   font-weight: 400;
+  font-family: "Lato-Regular", "Arial", sans-serif;
+  letter-spacing: -0.4;
+  text-align: justify;
 }
 
 .contact-information__adress {
   position: absolute;
-  top: 150px;
+  top: 138px;
+  left: 1px;
   font-size: 12px;
   line-height: 22px;
   color: #f0d8d9;
-  font-family: "Lato";
   font-weight: 400;
+  font-family: "Lato-Regular", "Arial", sans-serif;
+}
+
+.contact-information__geo {
+    margin-left: 23px;
+}
+
+.contact-information__tel {
+    margin-left: 23px;
+}
+
+.contact-information__email {
+    margin-left: 23px;
 }
 
 .contact-information__geo__img {
+    position: absolute;
+    top: 4px;
+    left: 3px;
   display: inline-block;
   height: 11px;
   width: 7px;
   background: url("./assets/img3/geo.png") no-repeat;
-  border: 1px solid black;
 }
 
 .contact-information__tel__img {
-  border: 1px solid black;
+    position: absolute;
+    top: 25px;
+    left: 1px;
   display: inline-block;
   height: 11px;
   width: 11px;
@@ -593,12 +636,17 @@ body {
 }
 
 .contact-information__email__img {
-  border: 1px solid black;
+    position: absolute;
+    top: 50px;
+    left: 0px;
   display: inline-block;
   height: 8px;
   width: 13px;
   background: url("./assets/img3/email.png")  no-repeat;
 }
+
+
+/* ========= footer ======= */
 
 .footer {
   position: relative;
@@ -611,8 +659,11 @@ body {
 }
 
 .footer__copyright {
-  margin: 24px 0 0 40px;
+  margin: 29px 0 0 40px;
   color: #666d89;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Lato-Regular", "Arial", sans-serif;
 }
 
 .footer__links {
@@ -629,9 +680,15 @@ body {
   width: 33px;
   display: inline-block;
   border-radius: 16px;
-  border: 1px solid #666d89;
   text-align: center;
 }
+
+.footer_link:hover {
+    cursor: pointer;
+    background-color: darkslateblue;
+    transition: background-color 1s ease-in-out;
+}
+
 
 .footer_link img {
   margin-top: 8px;
