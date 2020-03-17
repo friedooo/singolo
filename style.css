@@ -720,3 +720,13 @@ sup
 .footer_link img {
   margin-top: 8px;
 }
+
+
+
+/* ================== DOM ==================  */
+
+
+
+.active {
+    color: #f06c64 !important;
+}
