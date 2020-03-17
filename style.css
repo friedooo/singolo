@@ -545,6 +545,7 @@ sup
   height: 203px;
   margin: 3px 0 14px 0;
   padding-left: 15px;
+  padding-top: 10px;
   border: 0px solid black;
   border-radius: 5px;
   background-color: #d6564f;
@@ -556,7 +557,6 @@ sup
 }
 
 .get-quote__form textarea::placeholder {
-    padding-top: 10px;
   font-size: 12px;
   line-height: 22px;
   color: #f48c8f;
@@ -724,13 +724,45 @@ sup
 
 
 /* ================== DOM ==================  */
+ 
 
-
-
+/* ============= header ==================== */
 .active {
     padding: 4px;
     color: #f06c64 !important;
     border: 1.5px solid #f06c64;
     border-radius: 40%;
-
 }
+
+/* ==================== get a quote ================ */
+
+.message-block {
+    position: fixed;
+    width: 1020px;
+    height: 100vh;
+    text-align: center;
+    background-color: rgb(29, 37, 112);
+    z-index: 1000;
+    opacity: 0.5;
+}
+
+.message {
+    position: fixed;
+    width: 200px;
+    top: 50%;
+    left: calc(50% - 100px);
+    border: 1px solid rgb(134, 49, 67);
+    background-color: white;
+    z-index: 1000;
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+#info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+

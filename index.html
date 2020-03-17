@@ -6,6 +6,12 @@
     <title>Singolo</title>
 </head>
 <body>
+    <div class="message-block hidden">
+</div>
+<div class="message hidden">
+    <div id = "info"> </div>
+<button id = "close-Btn"> Закрыть </button>
+        </div>
         <header class = "header">
                <div class="logo">SINGOLO<sup>&#10038;</sup></div>
                <nav class="header__navigation">
@@ -209,13 +215,12 @@
             mauris condimentum nibh.
         </p>
         <div class="get-quote__wrapper">
-        <form class = "get-quote__form" action="https://www.w3schools.com/action_page.php"
-        method="post" name="feedback" target="_blank">
-            <input type="text" name="name" placeholder="Name (Required)" required>
-            <input type="email" name="email" placeholder="Email (Required)" required>
-            <input type="text" name="subject" placeholder="Subject">
-            <textarea name="description" name="message" id="" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-            <input type="submit" value = "send" class="send">
+        <form class = "get-quote__form" name="feedback">
+            <input type="text" name="name" placeholder="Name (Required)" id = 'name'>
+            <input type="email" name="email" placeholder="Email (Required)" id = 'email'>
+            <input type="text" name="subject" placeholder="Subject" id = 'subject'>
+            <textarea name="description" name="message" id="description" maxlength="240" placeholder="Describe your project in detail..."></textarea>
+            <input type="submit" value = "send" class="send" id = 'submit'>
         </form>
         <div class="contact-information">
             <h3 class = "contact-information__title">Contact Information</h3>
