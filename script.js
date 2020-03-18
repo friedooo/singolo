@@ -101,10 +101,30 @@ images[10].src, images[11].src, images[0].src];
     event.target.parentNode.classList.add('sortbar__active');
     else if (event.target.parentNode.tagName == 'LI')
     event.target.classList.add('sortbar__active');
-
-   
-
 });
+
+
+// ================== images interactive
+
+let images = document.getElementsByClassName('portfolio__images')[0];
+
+images.addEventListener('click', (event) =>{
+
+    if (event.target.tagName == 'IMG')
+    {
+    if (event.target.className != 'img-interact')
+    {
+images.querySelectorAll('img').forEach(elem =>{
+    elem.classList.remove('img-interact')
+});
+event.target.classList.add('img-interact');
+    }
+else
+event.target.classList.remove('img-interact');
+    }
+});
+
+
 
 
 
