@@ -767,8 +767,5 @@ sup
 }
 
 .img-interact {
-    width: 210px;
-    height: 177px;
-    border: 5px solid #F06C64;
-
+    outline: 5px solid #F06C64;;
 }
