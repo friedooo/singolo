@@ -6,20 +6,29 @@
     <title>Singolo</title>
 </head>
 <body>
+    <div class="message-block hidden">
+</div>
+<div class="message hidden">
+    <div id = "info"> </div>
+<button id = "close-Btn"> Закрыть </button>
+        </div>
         <header class = "header">
                <div class="logo">SINGOLO<sup>&#10038;</sup></div>
                <nav class="header__navigation">
-                       <ul class="navbar">
-                           <li class = "select"><a href="#">HOME</a></li>
-                           <li><a href="#">SERVICES</a></li>
-                           <li><a href="#">PORTFOLIO</a></li>
-                           <li><a href="#">ABOUT</a></li>
-                           <li><a href="#">CONTACT</a></li>
+                       <ul class="navbar" id = 'navId'>
+                           <li><a class = "active" href="#home">HOME</a></li>
+                           <li ><a href="#services">SERVICES</a></li>
+                           <li><a href="#portfolio">PORTFOLIO</a></li>
+                           <li><a href="#about">ABOUT</a></li>
+                           <li><a href="#contact">CONTACT</a></li>
                    </ul>
                </nav>
        </header>
+       <div class="wrapper-header" id = "home">
+
+       </div>
     <main>
-       <section class='slider'>
+       <section class="slider">
                <div class = "button left-button">
                 </div>
                <div class="vertical-handy">
@@ -32,7 +41,7 @@
                    <img src="assets/img/arrow-right.png" alt="right button">
                </div>
        </section>
-       <section class="our-services">
+       <section class="our-services" id = "services">
                <div class = "our-services__name">Our Services</div>
                <p class = "our-services__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                    Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget
@@ -93,7 +102,7 @@
                </div>
            </div>
         </section>
-        <section class = "portfolio">
+        <section class = "portfolio" id = "portfolio">
             <h2 class = "portfolio__title"> 
             Portfolio
             </h2>   
@@ -102,7 +111,7 @@
             </div> 
         
             <ul class = "sortbar">
-                <li><button id="sortbar__active"><span>All</span></button></li>
+                <li><button class="sortbar__active"><span>All</span></button></li>
                 <li><button><span>Web Design</span></button></li>
                 <li><button><span>Graphic Design</span></button></li>
                 <li><button><span>Artwork</span></button></li>
@@ -122,7 +131,7 @@
             <img src="assets/img2/envelope.png" alt="envelope">
             </div>    
         </section>
-        <section class = "about-us">
+        <section class = "about-us" id = "about">
             <h2 class="about-us__title">
                 About Us
             </h2>
@@ -198,7 +207,7 @@
                 </div>
             </div>
         </section>
-    <section class = "get-quote">
+    <section class = "get-quote" id = "contact">
         <h2 class="get-quote__title">Get a Quote</h2>
         <p class="get-quote__description">Fusce dapibus, tellus ac cursus commodo, 
             tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor 
@@ -206,13 +215,12 @@
             mauris condimentum nibh.
         </p>
         <div class="get-quote__wrapper">
-        <form class = "get-quote__form" action="https://www.w3schools.com/action_page.php"
-        method="post" name="feedback" target="_blank">
-            <input type="text" name="name" placeholder="Name (Required)" required>
-            <input type="email" name="email" placeholder="Email (Required)" required>
-            <input type="text" name="subject" placeholder="Subject">
-            <textarea name="description" name="message" id="" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-            <input type="submit" value = "send" class="send">
+        <form class = "get-quote__form" name="feedback">
+            <input type="text" name="name" placeholder="Name (Required)" id = 'name'>
+            <input type="email" name="email" placeholder="Email (Required)" id = 'email'>
+            <input type="text" name="subject" placeholder="Subject" id = 'subject'>
+            <textarea name="description" name="message" id="description" maxlength="240" placeholder="Describe your project in detail..."></textarea>
+            <input type="submit" value = "send" class="send" id = 'submit'>
         </form>
         <div class="contact-information">
             <h3 class = "contact-information__title">Contact Information</h3>
@@ -260,5 +268,6 @@
         </div>
     </div>
     </footer>
+    <script src = "script.js"></script>
 </body>
 </html>
