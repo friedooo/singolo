@@ -10,6 +10,32 @@ navbar.addEventListener('click', (event) =>
     event.target.classList.add('active');
 });
 
+
+document.addEventListener('scroll', () => {
+    const curPos = window.scrollY;
+    const sections = document.querySelectorAll('.for-scroll');
+
+    //console.log(window.scrollY);
+    sections.forEach((elem) => {
+        if (window.scrollY < 600)
+                    {
+                        navbar.querySelectorAll('li a')[0].classList.add('active');
+                        //console.log(1);
+                    }
+        if (elem.offsetTop - 100<= curPos && (elem.offsetTop + elem.offsetHeight) > curPos)
+        {
+            navbar.querySelectorAll('li a').forEach(elem1 => {
+                elem1.classList.remove('active');
+                if (elem.getAttribute('id') === elem1.getAttribute('href').substring(1))
+                {
+                    elem1.classList.add('active');
+                }
+            });
+        }
+        
+    });
+
+});
 // ====================== Get a quote
 
 

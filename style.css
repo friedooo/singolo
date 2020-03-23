@@ -727,11 +727,17 @@ sup
  
 
 /* ============= header ==================== */
+
+html{
+    scroll-behavior: smooth;
+}
+
 .active {
     padding: 4px;
     color: #f06c64 !important;
     border: 1.5px solid #f06c64;
     border-radius: 40%;
+    transition: all .3s;
 }
 
 /* ==================== get a quote ================ */
