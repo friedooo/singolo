@@ -152,5 +152,43 @@ event.target.classList.remove('img-interact');
 
 
 
+// =============== slider
+
+
+let buttons = document.querySelectorAll('.button');
+let i = 0;
+
+buttons[0].addEventListener('click', moveLeft);
+
+buttons[0].addEventListener('click', switchColor);
+buttons[1].addEventListener('click', switchColor);
+
+function switchColor()
+{
+    let background = document.getElementsByClassName('slider')[0];
+    background.style.transition = 'all 1s';
+    background.classList.toggle('slider-color');
+}
+
+
+function moveLeft()
+{
+    let arr = document.querySelector('.handys').children;
+
+
+    console.log(arr[0]);
+    for (let elem of arr[0].children)
+    {
+        elem.classList.add('move-left');
+        window.setTimeout(() => elem.classList.add('stay-right'), 1000);
+    }
+
+    
+    
+}
+
+console.log(document.getElementsByClassName('slide1')[0].children);
+
+
 
 
