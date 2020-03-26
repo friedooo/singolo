@@ -175,13 +175,15 @@ function moveLeft()
 {
     let arr = document.querySelector('.handys').children;
 
+    document.getElementById('qwe').style.transition = 'all 1s'; 
+    document.getElementById('qwe').style.left = 100;
+    arr[0].classList.add('move-left');
 
-    console.log(arr[0]);
-    for (let elem of arr[0].children)
-    {
-        elem.classList.add('move-left');
-        window.setTimeout(() => elem.classList.add('stay-right'), 1000);
-    }
+    // for (let elem of arr[0].children)
+    // {
+    //     elem.classList.add('move-left');
+    //     window.setTimeout(() => elem.classList.add('stay-right'), 1000);
+    // }
 
     
     

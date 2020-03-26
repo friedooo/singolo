@@ -167,6 +167,15 @@ sup
     height: inherit;
 }
 
+#qwe {
+    position: relative;
+    display: inline;
+    top: 20px;
+    left: 20px;
+}
+
+
+
 .slide2 {
     position: absolute;
     width: 1020px;
