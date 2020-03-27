@@ -159,6 +159,7 @@ let buttons = document.querySelectorAll('.button');
 let i = 0;
 
 buttons[0].addEventListener('click', moveLeft);
+buttons[1].addEventListener('click', moveLeft);
 
 buttons[0].addEventListener('click', switchColor);
 buttons[1].addEventListener('click', switchColor);
@@ -170,26 +171,28 @@ function switchColor()
     background.classList.toggle('slider-color');
 }
 
+let arrSlides = document.querySelector('.handys').children;
+
+//console.log(arrSlides);
 
 function moveLeft()
 {
-    let arr = document.querySelector('.handys').children;
 
-    document.getElementById('qwe').style.transition = 'all 1s'; 
-    document.getElementById('qwe').style.left = 100;
-    arr[0].classList.add('move-left');
-
-    // for (let elem of arr[0].children)
-    // {
-    //     elem.classList.add('move-left');
-    //     window.setTimeout(() => elem.classList.add('stay-right'), 1000);
-    // }
-
-    
-    
+    arrSlides[0].classList.remove('move-center');
+    arrSlides[0].classList.add('move-left');
+    arrSlides[1].classList.remove('move-left');
+    arrSlides[1].classList.add('move-center');
+    arrSlides[1].classList.remove('stay-right');
+    buttons[0].style.pointerEvents='none';
+    setTimeout(() => {
+        arrSlides[0].classList.add('stay-right');
+        arrSlides = [arrSlides[1], arrSlides[0]];
+        buttons[0].style.pointerEvents='auto';
+    },1000); 
 }
 
-console.log(document.getElementsByClassName('slide1')[0].children);
+
+
 
 
 
