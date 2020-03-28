@@ -26,17 +26,11 @@
 
   html {
       font-size: 10px;
+      scroll-behavior: smooth;
   }
-
-* {
-    margin: 0;
-    padding: 0;
-    }
 
     
 body {
-    padding: 0;
-    margin: 0;
     margin-left: auto;
     margin-right: auto;
     width: 1020px;
@@ -47,7 +41,6 @@ body {
 .header{
     position: fixed;
     width: 1020px;
-    height: 89px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -332,8 +325,9 @@ sup
 
     .tool{
         position: relative;
-        width: 35%;
+        width: 50%;
         margin-bottom: 39px;
+        
     }
 
     .tool__description{
@@ -359,7 +353,6 @@ sup
     overflow: hidden;
     
 }
-
 
 .portfolio__title {
     position: absolute;
@@ -452,11 +445,15 @@ sup
 
 /* ========== portfolio images responsive ========*/
 
-/* @media {
-    .portfolio__images {
-        
+ @media(max-width: 1019px) {
+
+    .portfolio{
+        height: 1280px;
     }
-} */
+    .portfolio__images img{
+        width: 30%;
+    }
+} 
 
 .about-us {
     position: relative;
@@ -837,9 +834,7 @@ sup
 
 /* ============= header ==================== */
 
-html{
-    scroll-behavior: smooth;
-}
+
 
 .active {
     padding: 4px;
