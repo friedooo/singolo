@@ -177,7 +177,6 @@ let arrSlides = document.querySelector('.handys').children;
 
 function moveLeft()
 {
-
     arrSlides[0].classList.remove('move-center');
     arrSlides[0].classList.add('move-left');
     arrSlides[1].classList.remove('move-left');
