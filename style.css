@@ -24,6 +24,10 @@
     font-weight: 400;
   }
 
+  html {
+      font-size: 10px;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -209,12 +213,10 @@ sup
 /* ===================== slider switch =============== */
 
 
-
 .left-handy {
     position: absolute;
     top: 152px;
     left: 253px;
-
 }
 
 .center-handy {
@@ -238,7 +240,7 @@ sup
 .our-services{
     position: relative;
     height: 497px;
-    width: 1020px;
+    width: 100%;
     background-color: #f2f2f2;
     border-bottom: 5px solid white;
 }
@@ -247,13 +249,14 @@ sup
     position: absolute;
     top: 68px;
     left: 40px;
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 18px;
     color: #666d89;
     font-weight: 900;;
     font-family: 'Lato-Black', 'Arial', sans-serif;
     letter-spacing: 0.2px
 }
+
 
 .our-services__description{
     position: absolute;
@@ -310,7 +313,7 @@ sup
     left: 79px;
     width: 219px;
     height: 128px;
-    font-size: 12px;
+    font-size: 100%;
     line-height: 22px;
     color: #767e9e;
     font-family: "Lato-Light", 'Arial', sans-serif;
@@ -446,6 +449,14 @@ sup
 .portfolio__images img {
     margin-bottom: 20px;
 }
+
+/* ========== portfolio images responsive ========*/
+
+/* @media {
+    .portfolio__images {
+        
+    }
+} */
 
 .about-us {
     position: relative;
