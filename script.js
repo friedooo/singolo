@@ -41,12 +41,21 @@ function onScroll(event) {
     document.querySelectorAll('section').forEach( el => {
 
         if (el.offsetTop - 100 <= curPos && (el.offsetTop + el.offsetHeight - 100) > curPos) {
+            let flag = false
             links.forEach(a => {
                 a.classList.remove('active');
                 if (el.firstElementChild.getAttribute('name') === a.getAttribute('href').substring(1)) {
                     a.classList.add('active'); 
                 }
+                if (a.classList.contains('active'))
+                {
+                    flag = true;
+                }
             })
+            if (flag == false)
+            {
+                links[0].classList.add('active');
+            }
         }
 
     }); 
