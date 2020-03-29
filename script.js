@@ -95,6 +95,8 @@ FILTER.addEventListener('click', (event) => {
 const GALLERY = document.getElementById('gallery');
 
 GALLERY.addEventListener('click', (event) => {
+    if (event.target.tagName == 'IMG')
+    {
     if (event.target.classList.contains('item_active'))
     {
     event.target.classList.remove('item_active');  
@@ -103,7 +105,7 @@ GALLERY.addEventListener('click', (event) => {
         GALLERY.querySelectorAll('img').forEach(el => el.classList.remove('item_active'));
         event.target.classList.add('item_active');
     }
-    
+    }
     
 });
 
