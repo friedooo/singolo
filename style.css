@@ -538,7 +538,7 @@ body {
     justify-content: space-between;
 }
 
-.information_content {
+.info_content {
     flex-basis: 100%;
 }
 
@@ -571,11 +571,11 @@ body {
     width: 66%;
 }
 
-.information-contacts {
+.info-contacts {
     width: 32%
 }
 
-.information-form_input {
+.info-form_input {
     height: 40px;
     border-radius: 5px;
     background-color: #d6564f;  
@@ -610,31 +610,31 @@ body {
     margin-bottom: 0;
 }
 
-.information-form_input::placeholder {
+.info-form_input::placeholder {
     font-size: 1.2rem;
     font-family: "Lato";
     color: #f48c8f;
     line-height: 22px;
 }
 
-.information-form_input:focus {
+.info-form_input:focus {
     outline: none;
 }
 
-.information-contacts_header {
+.info-contacts_header {
     font-size: 1.8rem;
     line-height: 19px;
     font-weight: 600;
 }
 
-.information-contacts_text {
+.info-contacts_text {
     margin: 10px 0 20px 0;
     word-spacing: -0.04rem;
     text-align: justify;
     line-height: 22px;
 }
 
-.information-contacts_link {
+.info-contacts_link {
     display: block;
     margin: 0;
     padding: 0;
@@ -645,7 +645,7 @@ body {
     font-family: "Lato";
   }
 
-.information-contacts_link::before {
+.info-contacts_link::before {
     display: inline-block;
     width: 13px;
     height: 11px;
@@ -875,7 +875,7 @@ body {
         width: 64%;
     }
 
-    .information-form_input {
+    .info-form_input {
         margin-bottom: 10px;
         padding-left: 10px;
     }
@@ -891,12 +891,12 @@ body {
         height: 151px;
     }
 
-    .information-contacts_header {
+    .info-contacts_header {
         margin-top: 0;
         line-height: 22px;
     }
 
-    .information-contacts_text {
+    .info-contacts_text {
         margin: 0;
         margin-bottom: 10px;
     }
@@ -1120,15 +1120,15 @@ body {
         height: 159px;
     }
     
-    .information-contacts {
+    .info-contacts {
         width: 100%;
     }
     
-    .information-contacts_header {
+    .info-contacts_header {
         margin-top: 22px;
     }
 
-    .information-contacts_link {
+    .info-contacts_link {
         margin-bottom: 5px;
     }
 
