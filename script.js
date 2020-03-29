@@ -1,128 +1,159 @@
-// ====================== Header 
+document.addEventListener('scroll', onScroll);
 
-let navbar = document.getElementById('navId')
+function onScroll(event) {
+    const curPos = window.scrollY;
+    const links = document.querySelectorAll('.navigation a');
+    
+    document.querySelectorAll('section').forEach( el => {
 
+        if (el.offsetTop - 100 <= curPos && (el.offsetTop + el.offsetHeight - 100) > curPos) {
+            links.forEach(a => {
+                a.classList.remove('active');
+                if (el.firstElementChild.getAttribute('name') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active'); 
+                }
+            })
+        }
 
-navbar.addEventListener('click', (event) => 
-{
-    navbar.querySelectorAll('li a').forEach(elem => elem.classList.remove('active'));
-    if (event.target.tagName == 'A')
-    event.target.classList.add('active');
+    }); 
+}
+//  Humburger menu
+
+document.getElementById('hamburger_button').addEventListener('click', function() {
+    document.getElementById('hamburger_button').classList.toggle('hamburger-active');
+    document.querySelector('.navigation-mobile').classList.toggle('navigation-active');
 });
 
-// ====================== Get a quote
+let items = document.querySelectorAll('.slider .item');
+let currentItem = 0;
+let isEnabled = true;
 
-
-let send = document.getElementById('submit');
-let message = document.getElementsByClassName('message')[0];
-let messageBlock = document.getElementsByClassName('message-block')[0];
-
-send.addEventListener('click', () => {
-
-    event.preventDefault();
-
-message.classList.remove('hidden');
-messageBlock.classList.remove('hidden');
-
-let info = {
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
 }
 
-let name = document.getElementById('name').value;
-if (/^\s*$/.test(name))
-info.name = '';
-else
-info.name = name;
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('item-active', direction);
+	});
+}
 
-let email = document.getElementById('email').value;
-if (/^\s*$/.test(email))
-info.email = '';
-else
-info.email = email;
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('item-active');
+		isEnabled = true;
+	});
+}
 
-let subject = document.getElementById('subject').value;
-if (/^\s*$/.test(subject))
-info.subject = 'Без темы';
-else
-info.subject = `Тема: ${subject}`;
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
 
-let description = document.getElementById('description').value;
-if (/^\s*$/.test(description))
-info.description = 'Без описания';
-else
-info.description = `Описание: ${description}` ;
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
 
-document.getElementById('info').innerHTML = `Письмо отправлено </br> ${info.subject} </br>  ${info.description}`;
+document.querySelector('.arrow-left').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
 });
 
-
-let closeBtn = document.getElementById('close-Btn');
-
-closeBtn.addEventListener('click', () => {
-    message.classList.add('hidden');
-    messageBlock.classList.add('hidden');
+document.querySelector('.arrow-right').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
 });
 
+//  Slider. Активация экранов телефонов
 
+const BUTTON_VERTICAL = document.getElementById('button_vertical');
+const BUTTON_HORIZONTAL = document.getElementById('button_horizontal');
 
+display_vertical.style.display = 'none';
+display_horizontal.style.display = 'none';
 
-/* ==================================== Portfolio switch  tabs */
-
-
-let sortbar = document.getElementsByClassName('sortbar')[0];
-sortbar.addEventListener('click', (event) => 
-{
-
-    if (event.target.parentNode.className != 'sortbar__active' && event.target.className != 'sortbar__active')
-    {
-        // Переключение картинок на одну влево
-
-    let images = document.getElementsByClassName('portfolio__images')[0].children;
-[images[0].src, images[1].src, images[2].src, 
-images[3].src, images[4].src, images[5].src, 
-images[6].src, images[7].src, images[8].src,
- images[9].src, images[10].src, images[11].src] 
- = 
-[images[1].src, images[2].src, images[3].src, 
-images[4].src, images[5].src, images[6].src, 
-images[7].src, images[8].src, images[9].src, 
-images[10].src, images[11].src, images[0].src];
+BUTTON_VERTICAL.addEventListener('click', (event) => {
+    if (display_vertical.style.display === 'none') {
+        display_vertical.style.display = 'block';
     }
+    else {
+        display_vertical.style.display = 'none';
+    }
+});
 
-    //делегирование передачи класса и удаление класса с остальных элементов
+BUTTON_HORIZONTAL.addEventListener('click', (event) => {
+    if (display_horizontal.style.display === 'none') {
+        display_horizontal.style.display = 'block';
+    }
+    else {
+        display_horizontal.style.display = 'none';
+    }
+});
 
-    sortbar.querySelectorAll('li span').forEach(elem => {
-        elem.classList.remove('sortbar__active');
-    });
-    sortbar.querySelectorAll('li button').forEach(elem => {
-        elem.classList.remove('sortbar__active');
-    });
+// Portfolio. Переключение табов
+
+const FILTER = document.getElementById('filter');
+
+FILTER.addEventListener('click', (event) => {
+    FILTER.querySelectorAll('.tag').forEach(el => el.classList.remove('tag-selected'));
+    event.target.classList.add('tag-selected');
+    GALLERY.querySelectorAll('li').forEach(img => img.style.order = Math.floor(Math.random() - 0.5));
     
-        if (event.target.parentNode.tagName == 'BUTTON')
-    event.target.parentNode.classList.add('sortbar__active');
-    else if (event.target.parentNode.tagName == 'LI')
-    event.target.classList.add('sortbar__active');
 });
 
+// Portfolio. Взаимодействие с картинками
 
-// ================== images interactive
+const GALLERY = document.getElementById('gallery');
 
-let images = document.getElementsByClassName('portfolio__images')[0];
-
-images.addEventListener('click', (event) =>{
-
-    if (event.target.tagName == 'IMG')
-    {
-    if (event.target.className != 'img-interact')
-    {
-images.querySelectorAll('img').forEach(elem =>{
-    elem.classList.remove('img-interact')
+GALLERY.addEventListener('click', (event) => {
+    GALLERY.querySelectorAll('img').forEach(el => el.classList.remove('item_active'));
+    event.target.classList.add('item_active');  
 });
-event.target.classList.add('img-interact');
+
+// Get a quote
+
+let modalForm = document.getElementById('form');
+let modal = document.getElementById('modal');
+let modalSubject = document.getElementById('modal-subject');
+let modalDescription = document.getElementById('modal-description');
+let modalButton = document.getElementById('modal_button'); 
+
+modalSubject.innerHTML = '';
+modalDescription.innerHTML = '';
+
+
+document.getElementById('submit').addEventListener('click', (event) => {
+    if (document.getElementById('name').checkValidity()) {
+        if (document.getElementById('email').checkValidity()) {
+            event.preventDefault();
+            let subject = document.getElementById('subject').value;
+            subject = subject === '' ? 'Without subject' : 'Subject: ' + subject;
+            let description = document.getElementById('description').value;
+            description = description === '' ? 'Without description' : 'Description: ' + description;
+            
+            modalSubject.innerHTML = subject;
+            modalDescription.innerHTML = description;
+            modal.style.display = 'block';
+        }
     }
-else
-event.target.classList.remove('img-interact');
-    }
 });
+
+modalButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.getElementById('form').reset();
+});
+
+
+
 
 
 
