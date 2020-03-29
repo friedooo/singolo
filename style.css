@@ -29,25 +29,26 @@
       scroll-behavior: smooth;
   }
 
-    
-body {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1020px;
-}
+  body {
+      margin: 0;
+  }
+
+
+.main-container{
+    max-width: 1020px;
+    margin: 0 auto;
+    overflow: hidden;
+} 
 
 /* ============ header ============ */
 
-<<<<<<< HEAD
-.header-container {
-    width: 100%;
-}
 
-=======
->>>>>>> parent of fb697f2... feat: new responsive
+
 .header{
     position: fixed;
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
+    height: 95px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,9 +57,8 @@ body {
     background-color: #2d303a;
 }
 
-.wrapper-header {
-    width: 1020px;
-    height:95px;
+.burger-menu {
+    display: none;
 }
 
 
@@ -125,22 +125,14 @@ sup
 }
 
 
-<<<<<<< HEAD
-
 /* ====== slider ==========*/
-/*
 
-=======
->>>>>>> parent of fb697f2... feat: new responsive
+
 .slider {
     position: relative;
-    width: 1020px;
     height: 594px;
-<<<<<<< HEAD
     margin-top: 95px;
     padding-right: 1px;
-=======
->>>>>>> parent of fb697f2... feat: new responsive
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
     overflow: visible;
@@ -184,34 +176,28 @@ sup
 .slide1 {
     position: absolute;
     left: 0px;
-<<<<<<< HEAD
     max-width: 1020px;
     width: 100%;
-=======
-    width: 1020px;
-    height: inherit;
->>>>>>> parent of fb697f2... feat: new responsive
 }
 
 
 .slide2 {
     position: absolute;
     left: 0px;
-    width: 1020px;
     height: inherit;
     
 }
 
 .vertical-handy{
     position: relative;
+    width: 100px;
     top: 53px;
     left: 112px;
 }
 
 .horizontal-handy{
     position: relative;
-    max-width: 484px;;
-    width: 100%;
+    width: 100px;
     top: -310px;
     left: 425px;
 }
@@ -233,7 +219,7 @@ sup
 
 
 /* ===================== slider switch =============== */
-/*
+
 
 .left-handy {
     position: absolute;
@@ -252,17 +238,14 @@ sup
     position: absolute;
     top: 152px;
     left: 612px;
-
 }
 
 
-
 /* ========== our services ========= */
-/*
+
 .our-services{
     position: relative;
     height: 497px;
-    width: 100%;
     background-color: #f2f2f2;
     border-bottom: 5px solid white;
 }
@@ -344,34 +327,12 @@ sup
 }
 
 /* ========= tools responsive ==============*/
-/*
-@media (max-width: 1019px)
-{
-    .tools {
-        left: 41px;
-        right: -30px;
-    }
 
-    .tool{
-        position: relative;
-        width: 50%;
-        margin-bottom: 39px;
-        
-    }
 
-    .tool__description{
-    font-size: 12px;
-    }
-
-    
-    .our-services{
-    height: 600px;
-    }
-}
 
 
 /* ============ portfoliO ========== */
-/*
+
 
 .portfolio {
     position: relative;
@@ -473,16 +434,8 @@ sup
 }
 
 /* ========== portfolio images responsive ========*/
-/*
- @media(max-width: 1019px) {
 
-    .portfolio{
-        height: 1280px;
-    }
-    .portfolio__images img{
-        width: 30%;
-    }
-} 
+ 
 
 .about-us {
     position: relative;
@@ -493,7 +446,7 @@ sup
 }
 
 /* ======== about us ======= */ 
-/*
+
 .about-us__title {
     position: absolute;
     top: 66px;
@@ -602,7 +555,7 @@ sup
 
 
 /* ======= get a quote ========= */
-/*
+
 .get-quote {
     position: relative;
     width: 1020px;
@@ -803,7 +756,7 @@ sup
 
 
 /* ========= footer ======= */
-/*
+
 .footer {
   position: relative;
   width: 1020px;
@@ -856,7 +809,7 @@ sup
   margin-top: 8px;
 }
 
-*/
+
 
 /* ================== DOM ==================  */
  
@@ -864,7 +817,7 @@ sup
 /* ============= header ==================== */
 
 
-/*
+
 .active {
     padding: 4px;
     color: #f06c64 !important;
@@ -874,7 +827,7 @@ sup
 }
 
 /* ==================== get a quote ================ */
-/*
+
 .message-block {
     position: fixed;
     width: 1020px;
@@ -907,4 +860,127 @@ sup
 
 .img-interact {
     outline: 5px solid #F06C64;;
-}*/
+}
+
+
+/* ============= mobile-menu ===============*/
+
+@media(max-width: 1019px) {
+
+    .main-container{
+        width: 768px;
+    }
+
+    .slider {
+        width:768px;
+    }
+
+    .our-services__description{
+        width: 687px;
+        height: 99px;
+       top: 90px;
+    }
+
+    .tools {
+        left: 41px;
+        right: 50px;
+    }
+
+    .tool{
+        position: relative;
+        width: 50%;
+        margin-bottom: 39px;
+        
+    }
+
+    .tool__description{
+    font-size: 12px;
+    }
+
+    .our-services{
+    height: 600px;
+    }
+
+
+    .portfolio{
+        width: 768px;
+        height: 1280px;
+    }
+    .portfolio__images img{
+        width: 30%;
+    }
+} 
+
+
+
+
+
+
+
+@media (max-width: 767px)
+{
+
+    .header {
+        position: absolute;
+        width: 375px;
+        height: 71px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .logo{
+        position: absolute;
+        margin: 0px;
+        position: absolute;
+        width: 92px;
+        height: 24px;
+        left: 148px;
+        top: 24px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19.6875px;
+        line-height: 24px;
+     }
+
+     .navbar {
+         display: none;
+     }
+
+     .burger-menu{
+        position: absolute;
+        width: 25px;
+        height: 20px;
+        left: 20px;
+        top: 28px;
+        display: block;
+     }
+
+     .slider {
+         top:-60px;
+         width: 375px;
+     }
+
+     
+    .tools {
+        left: 41px;
+        right: 50px;
+    }
+
+    .tool{
+        position: relative;
+        width: 100%;
+        margin-bottom: 39px;
+        
+    }
+
+    .tool__description{
+    font-size: 12px;
+    }
+
+    .our-services{
+    height: 1000px;
+    }
+ 
+}
+
