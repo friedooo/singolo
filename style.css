@@ -63,7 +63,7 @@ body {
     display: none;
 }
 
-.navigation_items {
+.navbar_items {
 	display: flex;
 	list-style: none;
 	text-transform: uppercase;
@@ -75,7 +75,7 @@ body {
     display: none;
 }
 
-.navigation_item {
+.navbar_item {
 	padding-left:26px;
 	cursor: pointer;
 }
@@ -86,14 +86,14 @@ body {
 }
 
 .navigation_link:hover {
-	color: #f06c64;
+	color: #898fd8;
 }
 
 .active {
-   color: #f06c64; 
+   color: #898fd8; 
 }
 
-.navigation_item:not(:last-child)::after {
+.navbar_item:not(:last-child)::after {
 	position: relative;
 	content: ".";
 	bottom: 3px;
@@ -930,7 +930,7 @@ body {
         justify-content: center;
     }
 
-    .navigation {
+    .navbar {
         display: none;
         overflow: hidden;
     }
@@ -959,14 +959,14 @@ body {
         padding-top: 45%;
     }
     
-    .navigation-active .navigation_item {
+    .navigation-active .navbar_item {
         font-size: 2.4rem;
         text-transform: uppercase;
         margin-bottom: 30px;
         padding-left: 75px;
     }
 
-    .navigation-active .navigation_item::after {
+    .navigation-active .navbar_item::after {
         content: none;
     }
 
